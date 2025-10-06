@@ -43,20 +43,18 @@
             <div class="con-button">
                 <button>Создать заявление</button>
             </div>
-            
            <div class="menu">
-            <div class="card">
+            
              @foreach ($reports as $report)
+                @method('delete')
+                @csrf
+              <div class="card">
                 <p>{{$report-> number}}</p>
                 <p>{{$report-> description}}</p>
+                <input type="submit" value="удалить" >
+              </div>
              @endforeach 
-            </div>
-            <div class="card">
-               
-            </div>
-            <div class="card">
-              
-            </div>
+            
            </div>
         </div>
     </div>

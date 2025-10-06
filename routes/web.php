@@ -16,3 +16,5 @@ Route::get('/reports/create', function () {
 })->name('reports.create');
 
 Route::get('/reports', [ReportController::class, 'index'])->name('report.index');
+
+Route::get('/reports/{report}', [ReportController::class, 'destroy'])->name('reports.destroy');
